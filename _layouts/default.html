@@ -4,7 +4,7 @@
   {% include head.html %}
 
   <body>
-  {% if page.title == "Home" %}
+  {% if page.layout == "post" %}
     <nav class="nav">
       <div class="nav-container">
         <a href="{{ site.baseurl }}/">
@@ -24,11 +24,12 @@
     </main>
 
     <footer>
+      &copy;
       <span>
       <a href="{{ site.baseurl }}/">{{ site.title }}</a>
       </span>
       <span>
-        &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+        <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}.
       </span>
     </footer>
   </body>
