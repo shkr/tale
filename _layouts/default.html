@@ -10,7 +10,9 @@
           <h2 class="nav-title">{{ site.title }}</h2>
         </a>
         <ul>
-          <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+          {% for page in site.header_pages %}
+           <li><a href="{{ page | prepend: '/' | prepend: site.baseurl }}">{{page}}</a></li>
+          {% endfor %}
           <li><a href="{{ site.baseurl }}/">Posts</a></li>
         </ul>
       </div>
