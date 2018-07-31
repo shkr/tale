@@ -12,8 +12,8 @@
         </a>
 
         <ul>
-          {% for page in site.header_pages %}
-           <li><a href="{{ site.baseurl }}/{{ page }}">{{ page.navbar_heading }}</a></li>
+          {% for header_page in site.header_pages %}
+           <li><a href="{{ site.baseurl }}/{{ header_page[1] }}">{{ header_page[0] }}</a></li>
           {% endfor %}
         </ul>
       </div>
