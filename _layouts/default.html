@@ -4,24 +4,16 @@
   {% include head.html %}
 
   <body>
-  {% if page.layout != "post" %}
-    <nav class="nav">
-      <div class="nav-container">
-        <a href="{{ site.baseurl }}/">
-          <h2 class="nav-title">{{ site.title }}</h2>
-        </a>
-
-        <ul>
-          {% for header_page in site.header_pages %}
-           <li><a href="{{ site.baseurl }}/{{ header_page.url }}">{{ header_page.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-    </nav>
-  {% endif %}
+  
+    {% include navbar.html %}
+    
+    {% if page.theme_disabled %}
+      {{ content  }}
+    {% else %}
     <main>
       {{ content }}
     </main>
+    {% endif %}
 
     <footer>
       &copy;
