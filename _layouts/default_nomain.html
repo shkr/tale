@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+  
+    {% include navbar.html %}
+    
+    {{ content }}
+
+    <footer>
+      &copy;
+      <span>
+      <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+      </span>
+      <span>
+        <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}.
+      </span>
+    </footer>
+  </body>
+</html>
